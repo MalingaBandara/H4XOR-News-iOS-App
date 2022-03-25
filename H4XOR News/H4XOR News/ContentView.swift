@@ -18,7 +18,10 @@ struct ContentView: View {
                 // List view (Like Table view)
             List(networkManager.posts){ post in             // ************ start closure *********
 
-                Text(post.title)
+                HStack {
+                    Text(String(post.points)) // add news point
+                    Text(post.title) // news title
+                }
             }                                                      // ******** end *********
             
         .navigationTitle("H4XOR NEWS") // navigation bar title
