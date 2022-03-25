@@ -9,7 +9,7 @@ import Foundation
 
 class NetworkManager : ObservableObject {
     
-     var posts = [Post]() // post objects (this come for 'Observer Design Patterns protocle')
+    @Published var posts = [Post]() // post objects (this come for 'Observer Design Patterns protocle')
     
     func fetchData() { // fetch Data from URL (API URL)
         
@@ -28,7 +28,10 @@ class NetworkManager : ObservableObject {
                         do{
                          let results = try decoder.decode(Results.self, from: safeData) // decode data
                             
-                         self.posts = results.hits // set 'results' to the 'posts' veriable
+                            DispatchQueue.main.async { // set it to the main thred
+                                
+                                self.posts = results.hits // set 'results' to the 'posts' veriable
+                            }
                             
                         }catch{
                              print(error)

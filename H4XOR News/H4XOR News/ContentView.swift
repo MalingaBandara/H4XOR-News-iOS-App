@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var networkManager = NetworkManager() //'NetworkManager' object
+    
     var body: some View {
         
         NavigationView{ // Navigation View (back to the previous screen)
         
-     // List view (Like Table view)
-            List(posts){ post in             // ************ start closure *********
-                
+                // List view (Like Table view)
+            List(networkManager.posts){ post in             // ************ start closure *********
+
                 Text(post.title)
-                
-            }                                       // ******** end *********
+            }                                                      // ******** end *********
             
         .navigationTitle("H4XOR NEWS") // navigation bar title
         }
-        
+        .onAppear {
+            self.networkManager.fetchData() // fetchData function calling
+        }
     }
 }
 
@@ -31,13 +35,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-
-// posts array
-let posts = [
-    
-    Post(id: "1", title: "Hello"),
-    Post(id: "2", title: "Hello"),
-    Post(id: "3", title: "Hello")
-
-]
