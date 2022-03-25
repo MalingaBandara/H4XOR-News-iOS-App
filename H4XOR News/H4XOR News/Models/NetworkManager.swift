@@ -7,7 +7,9 @@
 
 import Foundation
 
-class NetworkManager{
+class NetworkManager : ObservableObject {
+    
+     var posts = [Post]() // post objects (this come for 'Observer Design Patterns protocle')
     
     func fetchData() { // fetch Data from URL (API URL)
         
@@ -15,16 +17,27 @@ class NetworkManager{
             
             let session = URLSession(configuration: .default) // URL session
             
-            let task = session.dataTask(with: url) { ( data, response, error ) in
+            let task = session.dataTask(with: url) { (data, response, error) in
                 
                 if error == nil { // if errors aren't occurred
                     
                     let decoder = JSONDecoder() // add decoder to decode the data
                     
-                    
+                    if let safeData = data { // optional binding
+                      
+                        do{
+                         let results = try decoder.decode(Results.self, from: safeData) // decode data
+                            
+                         self.posts = results.hits // set 'results' to the 'posts' veriable
+                            
+                        }catch{
+                             print(error)
+                        }
+                    }
                 }
                 
             }
+            task.resume() // resume the task
             
         }
         
