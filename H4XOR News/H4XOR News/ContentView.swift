@@ -33,15 +33,6 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-// to store(get) Hacker News posts
-struct Post: Identifiable { // 'Identifiable' allow list to be able to recognize the oder of Post object based on 'ID' Veriable
- 
-    let id: String // unique identify the post
-    let title: String // post title
-    
-}
-
-
 // posts array
 let posts = [
     
