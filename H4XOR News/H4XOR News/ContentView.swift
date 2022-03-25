@@ -12,16 +12,19 @@ struct ContentView: View {
         
         NavigationView{ // Navigation View (back to the previous screen)
         
-        List{ // List view (Like Table view)
-            Text("Hello, world!")
-            Text("Hello, world!")
-        }
+     // List view (Like Table view)
+            List(posts){ post in             // ************ start closure *********
+                
+                Text(post.title)
+                
+            }                                       // ******** end *********
             
         .navigationTitle("H4XOR NEWS") // navigation bar title
         }
         
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
@@ -37,3 +40,13 @@ struct Post: Identifiable { // 'Identifiable' allow list to be able to recognize
     let title: String // post title
     
 }
+
+
+// posts array
+let posts = [
+    
+    Post(id: "1", title: "Hello"),
+    Post(id: "2", title: "Hello"),
+    Post(id: "3", title: "Hello")
+
+]
