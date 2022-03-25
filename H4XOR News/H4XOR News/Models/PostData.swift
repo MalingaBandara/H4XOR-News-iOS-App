@@ -23,7 +23,7 @@ struct Post: Decodable, Identifiable { // 'Identifiable' allow list to be able t
     let objectID: String     // get 'objectID' of story's inside API
     let points: Int         //  get 'point' of story's inside API
     let title: String      //   get 'title' of story's inside API
-    let url: String       //    get 'url' of story's inside API
+    let url: String?       //    get 'url' of story's inside API
     
 }
  
