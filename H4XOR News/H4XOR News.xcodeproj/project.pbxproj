@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C1D857F27F287F900660B12 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D857E27F287F900660B12 /* DetailView.swift */; };
+		4C1D858127F2969500660B12 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D858027F2969500660B12 /* WebView.swift */; };
 		4C57762827ED4595005098C0 /* H4XOR_NewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C57762727ED4595005098C0 /* H4XOR_NewsApp.swift */; };
 		4C57762A27ED4595005098C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C57762927ED4595005098C0 /* ContentView.swift */; };
 		4C57762C27ED4597005098C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C57762B27ED4597005098C0 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		4C1D857E27F287F900660B12 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		4C1D858027F2969500660B12 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		4C57762427ED4595005098C0 /* H4XOR News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H4XOR News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C57762727ED4595005098C0 /* H4XOR_NewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H4XOR_NewsApp.swift; sourceTree = "<group>"; };
 		4C57762927ED4595005098C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			children = (
 				4C57762927ED4595005098C0 /* ContentView.swift */,
 				4C1D857E27F287F900660B12 /* DetailView.swift */,
+				4C1D858027F2969500660B12 /* WebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				4C57763727ED537D005098C0 /* NetworkManager.swift in Sources */,
 				4C57763927ED5AFC005098C0 /* PostData.swift in Sources */,
 				4C57762A27ED4595005098C0 /* ContentView.swift in Sources */,
+				4C1D858127F2969500660B12 /* WebView.swift in Sources */,
 				4C1D857F27F287F900660B12 /* DetailView.swift in Sources */,
 				4C57762827ED4595005098C0 /* H4XOR_NewsApp.swift in Sources */,
 			);
